@@ -13,7 +13,7 @@
 <div data-role="page" id="home">
 	<div data-role="header" data-position="fixed" data-id="header"> <a href="index.html" data-icon="home">Home</a>
 		<h1>jQuery Mobile</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a> </div>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">About</a> </div>
 	<div data-role="content">
 		<ul data-role="listview">
 			<li><a href="#page">A Page</a></li>
@@ -21,26 +21,28 @@
 			<li><a href="#buttons">Buttons</a></li>
 			<li><a href="#accordion">Accordion</a></li>
 			<li><a href="#lists">Lists</a></li>
+			<li><a href="#form">Form Components</a></li>
 			<li><a href="#transitions">Page Transitions</a></li>
 			<li><a href="other.html">Other Page</a></li>
 		</ul>
-	</div>
+  </div>
 	<div data-role="footer" data-position="fixed" data-id="footer">
 		<h4>Footer</h4>
 	</div>
 </div>
 <div data-role="page" id="dialog">
 	<div data-role="header" data-id="header">
-		<h1>Dialog</h1>
+		<h1>About</h1>
 	</div>
 	<div data-role="content">
-		<p>This is a dialog box! Woot! </p>
+		<p>This web site is a demonstration of the various user interface elements available with jQuery Mobile.</p>
+        <p>(And this dialog is an example of a jQuery Mobile dialog box, complete with buttons!)</p>
 		<a href="index.html" data-role="button" data-inline="true" data-mini="true">Cancel</a> <a href="index.html" data-role="button" data-inline="true" data-theme="b" data-mini="true">Save</a> </div>
 </div>
 <div data-role="page" id="page">
 	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
-		<h1>A Pages</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a></div>
+		<h1>A Page</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">About</a></div>
 	<div data-role="content">
 <p>		This is the content for a page
 </p>
@@ -66,7 +68,7 @@
 <div data-role="page" id="navigation">
 	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
 		<h1>Navigation Bar</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">About</a>
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#">New</a></li>
@@ -101,7 +103,7 @@
 <div data-role="page" id="buttons">
 	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
 		<h1>Buttons</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a></div>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">About</a></div>
 	<div data-role="content">
 		<ul data-role="listview">
 			<li><a href="#regbuttons">Regular Buttons</a></li>
@@ -212,7 +214,7 @@
 <div data-role="page" id="accordion">
 	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
 		<h1>Accordion</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a> </div>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">About</a> </div>
 	<div data-role="content">
 		<div data-role="collapsible-set">
 			<div data-role="collapsible">
@@ -247,16 +249,17 @@
 <div data-role="page" id="lists">
 	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
 		<h1>Lists</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a></div>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">About</a></div>
 	<div data-role="content">
 		<ul data-role="listview">
 			<li><a href="#standardlist">Standard list view</a></li>
 			<li><a href="#insetlist">Inset list view</a></li>
 			<li><a href="#filtered">Filtered list view</a></li>
 			<li><a href="#split">Split list</a></li>
+			<li><a href="#title">Title and Description</a></li>
 			<li><a href="#counter">Counter list</a></li>
 		</ul>
-	</div>
+  </div>
 	<div data-role="footer" data-position="fixed" data-id="footer">
 		<h4>Footer</h4>
 	</div>
@@ -402,13 +405,179 @@
 	<div data-role="content"> </div>
 <div data-role="content"> </div>
 </div>
+<div data-role="page" id="title" data-add-back-btn="true">
+  <div data-role="header" data-position="fixed">
+    <h1>Title and Description</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><a href="#"><h2>About</h2>
+      <p>More information about this app.</p>
+      </a></li>
+      <li><a href="#"><h2>Inside</h2>
+      <p>What you'll find inside this app</p>
+      </a></li>
+      <li><a href="#"><h2>Resources</h2>
+      <p>Links to related resources outside this app.</p>
+      </a></li>
+    </ul>
+    <p><code>&lt;ul <strong>data-role=&quot;listview&quot;</strong>&gt;<br>
+  &nbsp;&nbsp;&lt;li&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a href=&quot;#&quot;&gt;&lt;h2&gt;About&lt;/h2&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;More information about this app.&lt;/p&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+&nbsp;&nbsp; </code><code>&lt;/li&gt;<br>
+      &nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;      &lt;a href=&quot;#&quot;&gt;&lt;h2&gt;Inside&lt;/h2&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;What you'll find inside this app&lt;/p&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+      &nbsp;&nbsp;      &lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;      &lt;a href=&quot;#&quot;&gt;&lt;h2&gt;Resources&lt;/h2&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Links to related resources outside this app.&lt;/p&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+      &nbsp;&nbsp;      &lt;/li&gt;<br>
+    &lt;/ul&gt; </code></p>
+</div>
+  <div data-role="footer" data-position="fixed" data-id="footer">
+    <h4>Footer</h4>
+  </div>
+  <div data-role="content"> </div>
+  <div data-role="content"> </div>
+</div>
 
 
 
+<div data-role="page" id="form">
+  <div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+    <h1>Form Elements</h1>
+    <a href="#dialog" data-icon="gear" data-rel="dialog">About</a></div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><a href="#text">Text fields</a></li>
+      <li><a href="#slider">Slider</a></li>
+      <li><a href="#toggle">Flip toggle switch</a></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+<div data-role="page" id="text" data-add-back-btn="true">
+  <div data-role="header" data-position="fixed">
+    <h1>Text fields</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontainer">
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email">
+    </div>
+    <p><code>&lt;div <strong>data-role=&quot;fieldcontainer&quot;</strong>&gt;<br>
+&lt;label for=&quot;email&quot;&gt;Email address&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;email&quot;</strong> name=&quot;email&quot; id=&quot;email&quot;&gt;<br>
+&lt;/div&gt;</code></p>
+     <div data-role="fieldcontainer">
+    <label for="telephone">Telephone</label>
+    <input type="tel" name="telephone" id="telephone">
+    </div>
+    <p><code>&lt;div <strong>data-role=&quot;fieldcontainer&quot;</strong>&gt;<br>
+&lt;label for=&quot;telephone&quot;&gt;Telephone&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;tel&quot;</strong> name=&quot;telephone&quot; id=&quot;telephone&quot;&gt;<br>
+&lt;/div&gt;</code></p>
+    <div data-role="fieldcontainer">
+    <label for="search">Search</label>
+    <input type="search" name="search" id="search">
+    </div>
+    <p><code>&lt;div <strong>data-role=&quot;fieldcontainer&quot;</strong>&gt;<br>
+&lt;label for=&quot;search&quot;&gt;Search&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;search&quot;</strong> name=&quot;search&quot; id=&quot;search&quot;&gt;<br>
+&lt;/div&gt;</code></p>
+    <div data-role="fieldcontainer">
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age">
+    </div>
+    <p><code>&lt;div <strong>data-role=&quot;fieldcontainer&quot;</strong>&gt;<br>
+&lt;label for=&quot;age&quot;&gt;Age&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;number&quot; </strong>name=&quot;age&quot; id=&quot;age&quot;&gt;<br>
+&lt;/div&gt;</code></p>
+    <div data-role="fieldcontainer">
+    <label for="web">Web address</label>
+    <input type="url" name="web" id="web">
+    </div>
+    <p><code>&lt;div <strong>data-role=&quot;fieldcontainer&quot;</strong>&gt;<br>
+&lt;label for=&quot;web&quot;&gt;Web address&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;url&quot;</strong> name=&quot;web&quot; id=&quot;web&quot;&gt;<br>
+&lt;/div&gt;</code></p>
+    <div data-role="fieldcontainer">
+    <label for="comments">Comments</label>
+    <textarea name="comments" id="comments"></textarea>
+    </div>
+    <p><code>&lt;div <strong>data-role=&quot;fieldcontainer&quot;</strong>&gt;<br>
+&lt;label for=&quot;comments&quot;&gt;Comments&lt;/label&gt;<br>
+&lt;textarea name=&quot;comments&quot; id=&quot;comments&quot;&gt;&lt;/textarea&gt;<br>
+&lt;/div&gt;</code></p>
+</div>
+
+  <div data-role="footer" data-position="fixed" data-id="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+<div data-role="page" id="slider" data-add-back-btn="true">
+  <div data-role="header" data-position="fixed">
+    <h1>Slider</h1>
+  </div>
+  <div data-role="content">
+    <label for="qty">Quantity</label>
+    <input type="range" id="qty" name="qty" min="1" max="100" value="50">
+    <label for="qty2">Quantity (themed)</label>
+    <input type="range" id="qty2" name="qty2" min="1" max="100" value="50" data-track-theme="e">
+    <label for="qty3">Quantity (mini form)</label>
+    <input type="range" id="qty3" name="qty3" min="1" max="100" value="50" data-mini="true">
+    <p><code>&lt;label for=&quot;qty&quot;&gt;Quantity&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;range&quot;</strong> id=&quot;qty&quot; name=&quot;qty&quot; <strong>min=&quot;1&quot; max=&quot;100&quot; value=&quot;50&quot;</strong>&gt;<br>
+&lt;label for=&quot;qty2&quot;&gt;Quantity (themed)&lt;/label&gt;<br>
+&lt;input <strong>type=&quot;range&quot;</strong> id=&quot;qty2&quot; name=&quot;qty2&quot; <strong>min=&quot;1&quot; max=&quot;100&quot; value=&quot;50&quot; data-track-theme=&quot;e&quot;</strong>&gt;<br>
+&lt;label for=&quot;qty3&quot;&gt;Quantity (mini form)&lt;/label&gt;<br>
+&lt;input type=&quot;range&quot; id=&quot;qty3&quot; name=&quot;qty3&quot; min=&quot;1&quot; max=&quot;100&quot; value=&quot;50&quot; <strong>data-mini=&quot;true&quot;</strong>&gt;</code></p>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+<div data-role="page" id="toggle" data-add-back-btn="true">
+  <div data-role="header" data-position="fixed">
+    <h1>Flip Toggle Switch</h1>
+  </div>
+  <div data-role="content">
+    <label for="mode">Airplane Mode</label>
+    <select id="mode" name="mode" data-role="slider">
+    <option value="off">Off</option>
+    <option value="on">On</option>
+    </select>
+     <label for="mode">Airplane Mode (mini form)</label>
+    <select id="mode" name="mode" data-role="slider" data-mini="true">
+    <option value="off">Off</option>
+    <option value="on">On</option>
+    </select>
+    <p><code>&lt;label for=&quot;mode&quot;&gt;Airplane Mode&lt;/label&gt;<br>
+&lt;select id=&quot;mode&quot; name=&quot;mode&quot; <strong>data-role=&quot;slider&quot;</strong>&gt;<br>
+&lt;option value=&quot;off&quot;&gt;Off&lt;/option&gt;<br>
+&lt;option value=&quot;on&quot;&gt;On&lt;/option&gt;<br>
+&lt;/select&gt;<br>
+&lt;label for=&quot;mode&quot;&gt;Airplane Mode (mini form)&lt;/label&gt;<br>
+&lt;select id=&quot;mode&quot; name=&quot;mode&quot;<strong> data-role=&quot;slider&quot; data-mini=&quot;true&quot;</strong>&gt;<br>
+&lt;option value=&quot;off&quot;&gt;Off&lt;/option&gt;<br>
+&lt;option value=&quot;on&quot;&gt;On&lt;/option&gt;<br>
+&lt;/select&gt;</code></p>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
 <div data-role="page" id="transitions">
-	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
-		<h1>Transitions</h1>
-		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a> </div>
+<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>Page Transitions</h1>
+  <a href="#dialog" data-icon="gear" data-rel="dialog">About</a> </div>
 	<div data-role="content">
 		<ul data-role="listview">
 			<li><a href="#slide" data-transition="slide">slide</a></li>
