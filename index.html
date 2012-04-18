@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile Testing</title>
+<link href="jquery-mobile/jquery.mobile-1.1.0.min.css" rel="stylesheet">
+<link href="jquery-mobile/styles.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.7.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.1.0.js"></script>
+</head>
+<body>
+<div data-role="page" id="home">
+	<div data-role="header" data-position="fixed" data-id="header"> <a href="index.html" data-icon="home">Home</a>
+		<h1>jQuery Mobile</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a> </div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#page">A Page</a></li>
+			<li><a href="#navigation">Navigation Bar</a></li>
+			<li><a href="#buttons">Buttons</a></li>
+			<li><a href="#accordion">Accordion</a></li>
+			<li><a href="#lists">Lists</a></li>
+			<li><a href="#transitions">Page Transitions</a></li>
+			<li><a href="other.html">Other Page</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="dialog">
+	<div data-role="header" data-id="header">
+		<h1>Dialog</h1>
+	</div>
+	<div data-role="content">
+		<p>This is a dialog box! Woot! </p>
+		<a href="index.html" data-role="button" data-inline="true" data-mini="true">Cancel</a> <a href="index.html" data-role="button" data-inline="true" data-theme="b" data-mini="true">Save</a> </div>
+</div>
+<div data-role="page" id="page">
+	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>A Page</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a></div>
+	<div data-role="content">
+<p>		This is the content for a page
+</p>
+<p><code>&lt;div <strong>data-role=&quot;page&quot;</strong> id=&quot;page&quot;&gt;<br>
+&lt;div <strong>data-role=&quot;header&quot; data-position=&quot;fixed&quot;</strong>&gt;<br>
+ </code><code>&nbsp;&nbsp;&lt;a href=&quot;index.html&quot; data-icon=&quot;home&quot;&gt;Home&lt;/a&gt;<br>
+	&nbsp;&nbsp;&lt;h1&gt;A Page&lt;/h1&gt;<br>
+	&nbsp;&nbsp;&lt;a href=&quot;#dialog&quot; data-icon=&quot;gear&quot; data-rel=&quot;dialog&quot;&gt;Dialog&lt;/a&gt;<br>
+ </code><code>&lt;/div&gt;<br>
+	&lt;div <strong>data-role=&quot;content&quot;</strong>&gt;<br>
+	&nbsp;&nbsp;&lt;p&gt;This is the content for a page&lt;/p&gt;<br>
+ </code><code>&lt;/div&gt;<br>
+	&lt;div <strong>data-role=&quot;footer&quot; data-position=&quot;fixed&quot; data-id=&quot;footer&quot;</strong>&gt;<br>
+	 &nbsp;&nbsp;&lt;h4&gt;Footer&lt;/h4&gt;<br>
+	&lt;/div&gt;<br>
+	&lt;/div&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+<div data-role="content"> </div>
+</div>
+<div data-role="page" id="navigation">
+	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>Navigation Bar</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#">New</a></li>
+				<li><a href="#">Search</a></li>
+				<li><a href="#">Filter</a></li>
+				<li><a href="#">Delete</a></li>
+			</ul>
+		</div></div>
+	<div data-role="content">
+		<p>A navigation bar (in header and footer)</p>
+		<p><code>&lt;div <strong>data-role=&quot;navbar&quot;</strong>&gt;&nbsp;<br>
+&nbsp;&nbsp;&lt;ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;New&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Filter&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Delete&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;/ul&gt;<br>
+&lt;/div&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#">New</a></li>
+				<li><a href="#">Search</a></li>
+				<li><a href="#">Filter</a></li>
+				<li><a href="#">Delete</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="content"> </div>
+</div>
+<div data-role="page" id="buttons">
+	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>Buttons</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a></div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#regbuttons">Regular Buttons</a></li>
+			<li><a href="#inlinebuttons">Inline Buttons</a></li>
+			<li><a href="#grpbuttons">Grouped Buttons</a></li>
+			<li><a href="#hbuttons">Horizontal Group</a></li>
+			<li><a href="#icnbuttons">Icon buttons</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="regbuttons" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Regular Buttons</h1>
+	</div>
+	<div data-role="content"> <a href="#" data-role="button">Regular button</a> <a href="#" data-role="button" data-theme="b">Using theme b</a>
+		<p><code>&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;<br>
+			&nbsp;&nbsp;		Regular button<br>
+			</code><code>&lt;/a&gt;<br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-theme=&quot;b&quot;</strong>&gt;<br>
+			&nbsp;&nbsp;		Using theme b<br>
+			&lt;/a&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="inlinebuttons" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Inline Buttons</h1>
+	</div>
+	<div data-role="content"> <a href="#" data-role="button" data-inline="true">Button</a> <a href="#" data-role="button" data-inline="true" data-theme="a"> A</a> <a href="#" data-role="button" data-inline="true" data-theme="b"> B</a>
+		<p><code>&lt;a href=&quot;#&quot; <strong>data-role=&quot;buton&quot; data-inline=&quot;true&quot;</strong>&gt;<br>
+			&nbsp;&nbsp;		Button<br>
+			&lt;/a&gt;<br>
+			</code><code>&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-inline=&quot;true&quot; data-theme=&quot;a&quot;</strong>&gt;<br>
+			&nbsp;&nbsp;		 A<br>
+			&lt;/a&gt;<br>
+			</code><code>&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-inline=&quot;true&quot; data-theme=&quot;b&quot;</strong>&gt;<br>
+			&nbsp;&nbsp;		 B<br>
+			&lt;/a&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="grpbuttons" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Grouped Buttons</h1>
+	</div>
+	<div data-role="content">
+		<div data-role="controlgroup"> <a href="#" data-role="button">Button 1</a> <a href="#" data-role="button">Button 2</a> <a href="#" data-role="button">Button 3</a> </div>
+		<p><code><strong>&lt;div data-role=&quot;controlgroup&quot;&gt;</strong><br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;Button 1&lt;/a&gt;<br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;Button 2&lt;/a&gt;<br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;Button 3&lt;/a&gt;<br>
+			<strong>&lt;/div&gt;</strong></code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="hbuttons" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Horizontal Group</h1>
+	</div>
+	<div data-role="content">
+		<div data-role="controlgroup" data-type="horizontal"> <a href="#" data-role="button">#1</a> <a href="#" data-role="button">#2</a> <a href="#" data-role="button">#3</a> </div>
+		<p><code><strong>&lt;div data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;</strong><br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;#1&lt;/a&gt;<br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;#2&lt;/a&gt;<br>
+			&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot;</strong>&gt;#3&lt;/a&gt;<br>
+			<strong>&lt;/div&gt;</strong></code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="icnbuttons" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Icon Buttons</h1>
+	</div>
+	<div data-role="content">
+		<a href="#" data-role="button" data-icon="alert" data-inline="true">Alert</a> <a href="#" data-role="button" data-icon="search" data-inline="true">Search</a>
+		<p><code>&lt;a href=&quot;#&quot;<strong> data-role=&quot;button&quot; d</strong><strong>ata-icon=&quot;alert&quot; </strong>data-inline=&quot;true&quot;&gt;Alert&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; da</strong><strong>ta-icon=&quot;search&quot;</strong> data-inline=&quot;true&quot;&gt;Search&lt;/a&gt;</code></p>
+		<p><a href="#" data-role="button" data-icon="delete" data-inline="true" data-iconpos="notext">Delete</a>
+			<a href="#" data-role="button" data-icon="grid" data-inline="true" data-iconpos="notext">Grid</a>
+			<a href="#" data-role="button" data-icon="info" data-inline="true" data-iconpos="notext">Info</a>
+			<a href="#" data-role="button" data-icon="home" data-inline="true" data-iconpos="notext">Home</a>
+			<a href="#" data-role="button" data-icon="arrow-l" data-inline="true" data-iconpos="notext">left arrow</a>
+			<a href="#" data-role="button" data-icon="arrow-r" data-inline="true" data-iconpos="notext">right arrow</a> <a href="#" data-role="button" data-icon="star" data-inline="true" data-iconpos="notext">Star</a>
+		</p>
+		<p><code>&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;delete&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;Delete&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;grid&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;Grid&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;info&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;Info&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;home&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;Home&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;arrow-l&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;left arrow&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;arrow-r&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;right arrow&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; <strong>data-role=&quot;button&quot; data-icon=&quot;star&quot; data-inline=&quot;true&quot; data-iconpos=&quot;notext&quot;</strong>&gt;Star&lt;/a&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="accordion">
+	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>Accordion</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a> </div>
+	<div data-role="content">
+		<div data-role="collapsible-set">
+			<div data-role="collapsible">
+				<h3>Books</h3>
+				<ul>
+					<li>JavaScript &amp; jQuery: The Missing Manual</li>
+					<li>CSS: The Missing Manual</li>
+					<li>Dreamweaver: The Missing Manual</li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Presentations</h3>
+				<ul>
+					<li>UX Immersion</li>
+					<li>InControl</li>
+					<li>WebVisions</li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Web sites</h3>
+				<ul>
+					<li><a href="http://sawmac.com/">sawmac.com</a></li>
+					<li><a href="http://nonbreakingspace.tv/">nonbreakingspace.tv</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="lists">
+	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>Lists</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a></div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#standardlist">Standard list view</a></li>
+			<li><a href="#insetlist">Inset list view</a></li>
+			<li><a href="#filtered">Filtered list view</a></li>
+			<li><a href="#split">Split list</a></li>
+			<li><a href="#counter">Counter list</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="standardlist" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Standard List</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li>Alpacas</li>
+			<li>Armadillos</li>
+			<li>Hippos</li>
+			<li>Iguanas</li>
+			<li>Moose</li>
+			<li>Narwhals</li>
+			<li>Penguins</li>
+			<li>Zebras</li>
+		</ul>
+		
+		<p><code>&lt;ul <strong>data-role=&quot;listview&quot;</strong>&gt;<br>
+&lt;li&gt;Alpacas&lt;/li&gt;<br>
+&lt;li&gt;Armadillos&lt;/li&gt;<br>
+&lt;li&gt;Hippos&lt;/li&gt;<br>
+&lt;li&gt;Iguanas&lt;/li&gt;<br>
+&lt;li&gt;Moose&lt;/li&gt;<br>
+&lt;li&gt;Narwhals&lt;/li&gt;<br>
+&lt;li&gt;Penguins&lt;/li&gt;<br>
+&lt;li&gt;Zebras&lt;/li&gt;<br>
+&lt;/ul&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="insetlist" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Inset List</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">
+			<li>Alpacas</li>
+			<li>Armadillos</li>
+			<li>Hippos</li>
+			<li>Iguanas</li>
+			<li>Moose</li>
+			<li>Narwhals</li>
+			<li>Penguins</li>
+			<li>Zebras</li>
+		</ul>
+		
+		<p><code>&lt;ul <strong>data-role=&quot;listview&quot; data-inset=&quot;true&quot;</strong>&gt;<br>
+&lt;li&gt;Alpacas&lt;/li&gt;<br>
+&lt;li&gt;Armadillos&lt;/li&gt;<br>
+&lt;li&gt;Hippos&lt;/li&gt;<br>
+&lt;li&gt;Iguanas&lt;/li&gt;<br>
+&lt;li&gt;Moose&lt;/li&gt;<br>
+&lt;li&gt;Narwhals&lt;/li&gt;<br>
+&lt;li&gt;Penguins&lt;/li&gt;<br>
+&lt;li&gt;Zebras&lt;/li&gt;<br>
+&lt;/ul&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="filtered" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Filtered List</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-filter="true">
+			<li>Alpacas</li>
+			<li>Armadillos</li>
+			<li>Hippos</li>
+			<li>Iguanas</li>
+			<li>Moose</li>
+			<li>Narwhals</li>
+			<li>Penguins</li>
+			<li>Zebras</li>
+		</ul>
+		<p><code>&lt;ul <strong>data-role=&quot;listview&quot; data-inset=&quot;true&quot; data-filter=&quot;true&quot;</strong>&gt;<br>
+	&lt;li&gt;Alpacas&lt;/li&gt;<br>
+	&lt;li&gt;Armadillos&lt;/li&gt;<br>
+	&lt;li&gt;Hippos&lt;/li&gt;<br>
+	&lt;li&gt;Iguanas&lt;/li&gt;<br>
+	&lt;li&gt;Moose&lt;/li&gt;<br>
+	&lt;li&gt;Narwhals&lt;/li&gt;<br>
+	&lt;li&gt;Penguins&lt;/li&gt;<br>
+	&lt;li&gt;Zebras&lt;/li&gt;<br>
+	&lt;/ul&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+<div data-role="content"> </div>
+</div>
+<div data-role="page" id="split" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Split</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-split-icon="refresh">
+			<li><a href="#">Item 1</a><a href="#">Default</a></li>
+			<li><a href="#">Item 2</a><a href="#">Default</a></li>
+			<li><a href="#">Item 3</a><a href="#">Default</a></li>
+			<li><a href="#">Item 4</a><a href="#">Default</a></li>
+		</ul>
+		<p><code>&lt;ul <strong>data-role=&quot;listview&quot; data-split-icon=&quot;refresh&quot;</strong>&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 4&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;</code></p>
+		
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+	</div>
+<div data-role="page" id="counter" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Counter</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#">InBox<span class="ui-li-count">10</span></a></li>
+			<li><a href="#">Sent<span class="ui-li-count">128</span></a></li>
+			<li><a href="#">Trash<span class="ui-li-count">1,019</span></a></li>
+			<li><a href="#">Junk Mail<span class="ui-li-count">20,159</span></a></li>
+		</ul>
+		<p><code>&lt;ul <strong>data-role=&quot;listview&quot;</strong>&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;InBox&lt;span <strong>class=&quot;ui-li-count&quot;</strong>&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sent&lt;span <strong>class=&quot;ui-li-count&quot;</strong>&gt;128&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Trash&lt;span <strong>class=&quot;ui-li-count&quot;</strong>&gt;1,019&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Junk Mail&lt;span <strong>class=&quot;ui-li-count&quot;</strong>&gt;20,159&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+	<div data-role="content"> </div>
+<div data-role="content"> </div>
+</div>
+
+
+
+<div data-role="page" id="transitions">
+	<div data-role="header" data-position="fixed"> <a href="index.html" data-icon="home">Home</a>
+		<h1>Transitions</h1>
+		<a href="#dialog" data-icon="gear" data-rel="dialog">Dialog</a> </div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#slide" data-transition="slide">slide</a></li>
+			<li><a href="#slideup" data-transition="slideup">slideup</a></li>
+			<li><a href="#slidedown" data-transition="slidedown">slidedown</a></li>
+			<li><a href="#pop" data-transition="pop">pop</a></li>
+			<li><a href="#fade" data-transition="fade">fade</a></li>
+			<li><a href="#flip" data-transition="flip">flip</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="slide" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>slide</h1>
+	</div>
+	<div data-role="content">
+		<h2>Slide page transition</h2>
+		<p><code>&lt;a href=&quot;#slide&quot; <strong>data-transition=&quot;slide&quot;</strong>&gt;slide&lt;/a&gt;</code></p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="slideup" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>slideup</h1>
+	</div>
+	<div data-role="content">
+		<h2>Slide Up page transition</h2>
+		<code>&lt;a href=&quot;#slideup&quot; <strong>data-transition=&quot;slideup&quot;</strong>&gt;slideup&lt;/a&gt;</code> </div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="slidedown" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>slidedown</h1>
+	</div>
+	<div data-role="content">
+		<h2>Slide Down page transition</h2>
+		<code>&lt;a href=&quot;#slideup&quot; <strong>data-transition=&quot;slidedown&quot;</strong>&gt;slidedown&lt;/a&gt;</code> </div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="pop" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>pop</h1>
+	</div>
+	<div data-role="content">
+		<h2>Pop page transition</h2>
+		<code>&lt;a href=&quot;#pop&quot; <strong>data-transition=&quot;pop&quot;</strong>&gt;pop&lt;/a&gt;</code> </div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="fade" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>fade</h1>
+	</div>
+	<div data-role="content">
+		<h2>Fade page transition</h2>
+		<code>&lt;a href=&quot;#fade&quot; <strong>data-transition=&quot;fade&quot;</strong>&gt;fade&lt;/a&gt;</code></div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="flip" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>flip</h1>
+	</div>
+	<div data-role="content">
+		<h2>Flip page transition</h2>
+		<code>&lt;a href=&quot;#flip&quot; <strong>data-transition=&quot;flip&quot;</strong>&gt;flip&lt;/a&gt;</code></div>
+	<div data-role="footer" data-position="fixed" data-id="footer">
+		<h4>Footer</h4>
+	</div>
+</div>
+</body>
+</html>
